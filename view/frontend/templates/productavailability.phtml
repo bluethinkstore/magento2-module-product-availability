@@ -1,0 +1,22 @@
+<?php
+
+/** @var Bluethinkinc\ProductAvailability\ViewModel\ProductData $viewModal */
+$viewModal = $block->getData('viewModel');
+$moduleEnabled = $viewModal->moduleStatus();
+$configValue = $viewModal->configMessagePDP();
+
+$product = $block->getProduct();
+$availabilityOfProduct = $product->getData('product_availability');
+?>
+
+<?php if ($moduleEnabled && $availabilityOfProduct !== null): ?>
+    <?php $availabilityOfProduct = date("d-M-Y", strtotime($availabilityOfProduct)); ?>
+<div>
+    <span>
+        <strong>
+            <i><?= $block->escapeHtmlAttr($configValue) ?> <?= $block->escapeHtmlAttr($availabilityOfProduct) ?></i>
+        </strong>
+    </span>
+</div>
+
+<?php endif; ?>

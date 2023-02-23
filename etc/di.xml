@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <type name="Magento\Catalog\Controller\Product\View">
+        <plugin name="product_availability_before_plugin" type="Bluethinkinc\ProductAvailability\Plugin\Product\View"/>
+    </type>
+    <type name="Magento\CatalogSearch\Controller\Result\Index">
+        <plugin name="before_plugin_for_search_product" type="Bluethinkinc\ProductAvailability\Plugin\Result\Index"/>
+    </type>
+    <type name="Magento\Catalog\Controller\Category\View">
+        <plugin name="before_execute_category_view" type="Bluethinkinc\ProductAvailability\Plugin\Category\View"/>
+    </type>
+    <type name="Magento\Wishlist\Controller\WishlistProvider">
+        <plugin name="before_getwishlist_plugin" type="Bluethinkinc\ProductAvailability\Plugin\WishlistProvider"/>
+    </type>
+</config>

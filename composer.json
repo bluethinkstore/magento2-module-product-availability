@@ -1,0 +1,21 @@
+{
+    "name": "bluethinkinc/magento2-module-product-availability",
+    "description": "This extension is about displaying the message for availability of product.",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "bluethinkinc",
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Bluethinkinc\\ProductAvailability\\": ""
+        }
+    }
+}

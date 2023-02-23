@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="bluethink" translate="label" sortOrder="100">
+		    <label>Bluethink Inc</label>
+		</tab>
+		<section id="outofstock" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+			<label>Product Availability</label>
+			<tab>bluethink</tab>
+			<resource>Bluethink_ProductAvailability::config_bluethink_productavailability</resource>
+			<group id="options" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+				<label>General Options</label>
+				<field id="enabled" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" canRestore="1" translate="label">
+					<label>Enabled</label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="message_pdp" type="text" sortOrder="20" showInWebsite="1" showInStore="1" showInDefault="1" translate="label" canRestore="1">
+					<label>Message on PDP</label>
+					<comment>This text will display on the frontend at PDP page.</comment>
+				</field>
+				<field id="message_plp" type="text" sortOrder="20" showInWebsite="1" showInStore="1" showInDefault="1" translate="label" canRestore="1">
+					<label>Message on PLP</label>
+					<comment>This text will display on the frontend at PLP page.</comment>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>
