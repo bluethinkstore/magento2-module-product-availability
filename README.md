@@ -1,6 +1,6 @@
 # Mage2 Module Bluethinkinc ProductAvailability
 
-    ``bluethinkinc/module-productavailability``
+    ``bluethinkinc/magento2-module-product-availability``
 
 ## Main Functionalities
 This extension is about displaying the message for availability of product at PDP.
@@ -26,7 +26,7 @@ status of the product will be disabled in the admin grid.
     - public repository `packagist.org`
     - public github repository as vcs
  - Add the composer repository to the configuration by running `composer config repositories.repo.magento.com composer https://repo.magento.com/`
- - Install the module composer by running `composer require bluethinkinc/module-productavailability`
+ - Install the module composer by running `composer require bluethinkinc/magento2-module-product-availability`
  - enable the module by running `php bin/magento module:enable Bluethinkinc_ProductAvailability`
  - apply database updates by running `php bin/magento setup:upgrade`
  - Compilation by running `php bin/magento setup:di:compile`
